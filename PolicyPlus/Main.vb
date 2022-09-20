@@ -472,7 +472,7 @@ Public Class Main
                String.Join(vbCrLf & vbCrLf, Failures.Select(Function(f) f.ToString)), boxStyle)
     End Function
     Function GetPreferredLanguageCode() As String
-        Return Configuration.GetValue("LanguageCode", Globalization.CultureInfo.CurrentCulture.Name)
+        Return Configuration.GetValue("LanguageCode", Globalization.CultureInfo.CurrentUICulture.Name)
     End Function
     Private Sub CategoriesTree_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles CategoriesTree.AfterSelect
         ' When the user selects a new category in the left pane
